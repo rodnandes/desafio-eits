@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Desafio">
+        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+        <dependent-module archiveName="DesafioEJB.jar" deploy-path="/" handle="module:/resource/DesafioEJB/DesafioEJB">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="DesafioFacade.jar" deploy-path="/" handle="module:/resource/DesafioFacade/DesafioFacade">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="DesafioFacadeClient.jar" deploy-path="/" handle="module:/resource/DesafioFacadeClient/DesafioFacadeClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="DesafioVO.jar" deploy-path="/lib" handle="module:/resource/DesafioVO/DesafioVO">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="DesafioWeb.war" deploy-path="/" handle="module:/resource/DesafioWeb/DesafioWeb">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+    </wb-module>
+</project-modules>
