@@ -13,6 +13,7 @@ import javax.ejb.FinderException;
 import java.util.Collection;
 
 // BEGIN imports from bean class
+import java.util.Date;
 import javax.ejb.CreateException;
 import javax.ejb.EntityBean;
 import weblogic.ejb.GenericEntityBean;
@@ -48,7 +49,7 @@ public interface TipoEquipamentoBeanLocalHome extends EJBLocalHome {
  * Please change as appropriate.
  
    */
-  public TipoEquipamentoBeanLocal create(Integer key)     throws CreateException, javax.ejb.CreateException;
+  public TipoEquipamentoBeanLocal create(Integer id)     throws CreateException, javax.ejb.CreateException;
 
 
 

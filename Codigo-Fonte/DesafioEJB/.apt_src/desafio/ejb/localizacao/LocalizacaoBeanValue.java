@@ -26,26 +26,34 @@ public class LocalizacaoBeanValue  implements Serializable  {
 
   public LocalizacaoBeanValue() {}
 
-  public LocalizacaoBeanValue(java.lang.Integer key) {
-    m_key = key;
+  public LocalizacaoBeanValue(java.lang.String codigoLocalizador, java.lang.Integer id) {
+    m_codigoLocalizador = codigoLocalizador;
+    m_id = id;
   }
 
   public java.lang.Integer toPK() {
-    return m_key;
+    return m_id;
   }
 
-  private java.lang.Integer m_key;
-  public java.lang.Integer getKey(){
-    return m_key;
+  private java.lang.String m_codigoLocalizador;
+  public java.lang.String getCodigoLocalizador(){
+    return m_codigoLocalizador;
   }
 
-  public void setKey(java.lang.Integer n){
-    m_key = n;
+  public void setCodigoLocalizador(java.lang.String n){
+    m_codigoLocalizador = n;
+  }  private java.lang.Integer m_id;
+  public java.lang.Integer getId(){
+    return m_id;
+  }
+
+  public void setId(java.lang.Integer n){
+    m_id = n;
   }
 
   public String toString() {
     StringBuffer result = new StringBuffer("[LocalizacaoBeanValue ");
-    result.append(  " key:" + m_key);
+    result.append(  " codigoLocalizador:" + m_codigoLocalizador +   " id:" + m_id);
     result.append("]");
     return result.toString();
   }
@@ -54,7 +62,9 @@ public class LocalizacaoBeanValue  implements Serializable  {
   public int hashCode() {
     if (0 == m_hashCode) {
       m_hashCode = 
-                            (null != m_key ? m_key.hashCode() : 0)
+                            (null != m_codigoLocalizador ? m_codigoLocalizador.hashCode() : 0)
+                              ^
+                (null != m_id ? m_id.hashCode() : 0)
                       ;
     }
     
@@ -68,7 +78,9 @@ public class LocalizacaoBeanValue  implements Serializable  {
     try {
       LocalizacaoBeanValue other2 = ( LocalizacaoBeanValue ) other;
             return
-                      (safeEquals(this.m_key, other2.m_key))
+                      (safeEquals(this.m_codigoLocalizador, other2.m_codigoLocalizador))
+                                  &&
+                (safeEquals(this.m_id, other2.m_id))
                       ;
     }
     catch(ClassCastException ex) {

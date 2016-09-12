@@ -26,26 +26,34 @@ public class UsuarioBeanValue  implements Serializable  {
 
   public UsuarioBeanValue() {}
 
-  public UsuarioBeanValue(java.lang.Integer key) {
-    m_key = key;
+  public UsuarioBeanValue(java.lang.Integer id, java.lang.String nome) {
+    m_id = id;
+    m_nome = nome;
   }
 
   public java.lang.Integer toPK() {
-    return m_key;
+    return m_id;
   }
 
-  private java.lang.Integer m_key;
-  public java.lang.Integer getKey(){
-    return m_key;
+  private java.lang.Integer m_id;
+  public java.lang.Integer getId(){
+    return m_id;
   }
 
-  public void setKey(java.lang.Integer n){
-    m_key = n;
+  public void setId(java.lang.Integer n){
+    m_id = n;
+  }  private java.lang.String m_nome;
+  public java.lang.String getNome(){
+    return m_nome;
+  }
+
+  public void setNome(java.lang.String n){
+    m_nome = n;
   }
 
   public String toString() {
     StringBuffer result = new StringBuffer("[UsuarioBeanValue ");
-    result.append(  " key:" + m_key);
+    result.append(  " id:" + m_id +   " nome:" + m_nome);
     result.append("]");
     return result.toString();
   }
@@ -54,7 +62,9 @@ public class UsuarioBeanValue  implements Serializable  {
   public int hashCode() {
     if (0 == m_hashCode) {
       m_hashCode = 
-                            (null != m_key ? m_key.hashCode() : 0)
+                            (null != m_id ? m_id.hashCode() : 0)
+                              ^
+                (null != m_nome ? m_nome.hashCode() : 0)
                       ;
     }
     
@@ -68,7 +78,9 @@ public class UsuarioBeanValue  implements Serializable  {
     try {
       UsuarioBeanValue other2 = ( UsuarioBeanValue ) other;
             return
-                      (safeEquals(this.m_key, other2.m_key))
+                      (safeEquals(this.m_id, other2.m_id))
+                                  &&
+                (safeEquals(this.m_nome, other2.m_nome))
                       ;
     }
     catch(ClassCastException ex) {

@@ -17,18 +17,20 @@ import weblogic.ejbgen.LocalMethod;
  * of your bean. Also, review primary key field methods and the Entity and JndiName annotations
  * to ensure the settings match the bean's intended use.
  */
-@Entity(ejbName = "LocalizacaoBean", dataSourceName = "cgDataSource", tableName = "LocalizacaoBean", primKeyClass = "java.lang.Integer")
+@Entity(ejbName = "LocalizacaoBean", dataSourceName = "oracledb", tableName = "LOCALIZACAO", primKeyClass = "java.lang.Integer")
 @JndiName(local = "ejb.LocalizacaoBeanLocalHome")
 @FileGeneration(localClass = Constants.Bool.TRUE, localHome = Constants.Bool.TRUE, remoteClass = Constants.Bool.FALSE, remoteHome = Constants.Bool.FALSE, valueClass = Constants.Bool.TRUE)
 abstract public class LocalizacaoBean extends GenericEntityBean implements
 		EntityBean {
+
+	private static final long serialVersionUID = 1L;
 	/**
 	 * IMPORTANT: Automatically generated ejbCreate() method.
 	 * Please change as appropriate.
 	 */
-	public java.lang.Integer ejbCreate(java.lang.Integer key)
+	public java.lang.Integer ejbCreate(java.lang.Integer id)
 			throws CreateException {
-		setKey(key);
+		setId(id);
 		return null;
 	}
 
@@ -39,18 +41,15 @@ abstract public class LocalizacaoBean extends GenericEntityBean implements
 	public void ejbPostCreate(java.lang.Integer key) {
 	}
 
-	/**
-	 * IMPORTANT: Automatically generated primary key field getter method. 
-	 * Please change name and class as appropriate.
-	 */
-	@CmpField(column = "key", primkeyField = Constants.Bool.TRUE)
+	@CmpField(column = "ID", primkeyField = Constants.Bool.TRUE)
 	@LocalMethod()
-	public abstract java.lang.Integer getKey();
-
-	/**
-	 * IMPORTANT: Automatically generated primary key field setter method. 
-	 * Please change name and class as appropriate.
-	 */
+	public abstract Integer getId();
 	@LocalMethod()
-	public abstract void setKey(java.lang.Integer key);
+	public abstract void setId(Integer id);
+	
+	@CmpField(column = "CODIGO_LOCALIZADOR")
+	@LocalMethod()
+	public abstract String getCodigoLocalizador();
+	@LocalMethod()
+	public abstract void setCodigoLocalizador(String codigo_localizador);
 }

@@ -35,20 +35,21 @@ public interface LocalizacaoBeanLocal extends EJBLocalObject {
 
 
   /**
-   * * 
- * IMPORTANT: Automatically generated primary key field getter method. 
- * Please change name and class as appropriate.
- 
    * @weblogic.ejbgen.LocalMethod 
-   * @weblogic.ejbgen.CmpField key
+   * @weblogic.ejbgen.CmpField CODIGO_LOCALIZADOR
    */
-  public Integer getKey() ;
+  public String getCodigoLocalizador() ;
   /**
-   * * 
- * IMPORTANT: Automatically generated primary key field setter method. 
- * Please change name and class as appropriate.
- 
+   * @weblogic.ejbgen.LocalMethod 
+   * @weblogic.ejbgen.CmpField ID
+   */
+  public Integer getId() ;
+  /**
    * @weblogic.ejbgen.LocalMethod 
    */
-  public void setKey(Integer key) ;
+  public void setCodigoLocalizador(String codigo_localizador) ;
+  /**
+   * @weblogic.ejbgen.LocalMethod 
+   */
+  public void setId(Integer id) ;
 }

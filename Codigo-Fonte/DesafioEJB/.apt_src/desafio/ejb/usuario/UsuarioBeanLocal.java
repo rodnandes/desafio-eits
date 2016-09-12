@@ -35,20 +35,21 @@ public interface UsuarioBeanLocal extends EJBLocalObject {
 
 
   /**
-   * * 
- * IMPORTANT: Automatically generated primary key field getter method. 
- * Please change name and class as appropriate.
- 
    * @weblogic.ejbgen.LocalMethod 
-   * @weblogic.ejbgen.CmpField key
+   * @weblogic.ejbgen.CmpField ID
    */
-  public Integer getKey() ;
+  public Integer getId() ;
   /**
-   * * 
- * IMPORTANT: Automatically generated primary key field setter method. 
- * Please change name and class as appropriate.
- 
+   * @weblogic.ejbgen.LocalMethod 
+   * @weblogic.ejbgen.CmpField NOME
+   */
+  public String getNome() ;
+  /**
    * @weblogic.ejbgen.LocalMethod 
    */
-  public void setKey(Integer key) ;
+  public void setId(Integer id) ;
+  /**
+   * @weblogic.ejbgen.LocalMethod 
+   */
+  public void setNome(String nome) ;
 }

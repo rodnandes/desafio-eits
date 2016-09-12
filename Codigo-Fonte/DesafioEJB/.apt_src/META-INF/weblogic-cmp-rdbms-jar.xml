@@ -11,34 +11,54 @@
   xsi:schemaLocation="http://www.bea.com/ns/weblogic/90 http://www.bea.com/ns/weblogic/90/weblogic-rdbms20-persistence.xsd">
   <weblogic-rdbms-bean>
     <ejb-name>UsuarioBean</ejb-name>
-    <data-source-jndi-name>cgDataSource</data-source-jndi-name>
+    <data-source-jndi-name>oracledb</data-source-jndi-name>
     <table-map>
-      <table-name>UsuarioBean</table-name>
+      <table-name>USUARIO</table-name>
       <field-map>
-        <cmp-field>key</cmp-field>
-        <dbms-column>key</dbms-column>
+        <cmp-field>id</cmp-field>
+        <dbms-column>ID</dbms-column>
+      </field-map>
+      <field-map>
+        <cmp-field>nome</cmp-field>
+        <dbms-column>NOME</dbms-column>
       </field-map>
     </table-map>
   </weblogic-rdbms-bean>
   <weblogic-rdbms-bean>
     <ejb-name>LocalizacaoBean</ejb-name>
-    <data-source-jndi-name>cgDataSource</data-source-jndi-name>
+    <data-source-jndi-name>oracledb</data-source-jndi-name>
     <table-map>
-      <table-name>LocalizacaoBean</table-name>
+      <table-name>LOCALIZACAO</table-name>
       <field-map>
-        <cmp-field>key</cmp-field>
-        <dbms-column>key</dbms-column>
+        <cmp-field>codigoLocalizador</cmp-field>
+        <dbms-column>CODIGO_LOCALIZADOR</dbms-column>
+      </field-map>
+      <field-map>
+        <cmp-field>id</cmp-field>
+        <dbms-column>ID</dbms-column>
       </field-map>
     </table-map>
   </weblogic-rdbms-bean>
   <weblogic-rdbms-bean>
     <ejb-name>TipoEquipamentoBean</ejb-name>
-    <data-source-jndi-name>cgDataSource</data-source-jndi-name>
+    <data-source-jndi-name>oracledb</data-source-jndi-name>
     <table-map>
-      <table-name>TipoEquipamentoBean</table-name>
+      <table-name>TIPO_EQUIPAMENTO</table-name>
       <field-map>
-        <cmp-field>key</cmp-field>
-        <dbms-column>key</dbms-column>
+        <cmp-field>id</cmp-field>
+        <dbms-column>ID</dbms-column>
+      </field-map>
+      <field-map>
+        <cmp-field>nome</cmp-field>
+        <dbms-column>NOME</dbms-column>
+      </field-map>
+      <field-map>
+        <cmp-field>peso</cmp-field>
+        <dbms-column>PESO</dbms-column>
+      </field-map>
+      <field-map>
+        <cmp-field>validade</cmp-field>
+        <dbms-column>VALIDADE</dbms-column>
       </field-map>
     </table-map>
   </weblogic-rdbms-bean>

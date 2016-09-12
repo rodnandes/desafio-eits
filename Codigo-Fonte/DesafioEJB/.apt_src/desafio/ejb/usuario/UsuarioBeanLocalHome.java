@@ -48,7 +48,7 @@ public interface UsuarioBeanLocalHome extends EJBLocalHome {
  * Please change as appropriate.
  
    */
-  public UsuarioBeanLocal create(Integer key)     throws CreateException, javax.ejb.CreateException;
+  public UsuarioBeanLocal create(Integer id)     throws CreateException, javax.ejb.CreateException;
 
 
 

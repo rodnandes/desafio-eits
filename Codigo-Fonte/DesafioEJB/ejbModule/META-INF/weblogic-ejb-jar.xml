@@ -20,6 +20,12 @@
     <local-jndi-name>ejb.UsuarioBeanLocalHome</local-jndi-name>
   </weblogic-enterprise-bean>
   <weblogic-enterprise-bean>
+    <ejb-name>LocalizacaoSession</ejb-name>
+    <stateless-session-descriptor>
+    </stateless-session-descriptor>
+    <jndi-name>ejb.LocalizacaoSessionRemoteHome</jndi-name>
+  </weblogic-enterprise-bean>
+  <weblogic-enterprise-bean>
     <ejb-name>LocalizacaoBean</ejb-name>
     <entity-descriptor>
       <persistence>
@@ -44,5 +50,17 @@
       </persistence>
     </entity-descriptor>
     <local-jndi-name>ejb.TipoEquipamentoBeanLocalHome</local-jndi-name>
+  </weblogic-enterprise-bean>
+  <weblogic-enterprise-bean>
+    <ejb-name>TipoEquipamentoSession</ejb-name>
+    <stateless-session-descriptor>
+    </stateless-session-descriptor>
+    <jndi-name>ejb.TipoEquipamentoSessionRemoteHome</jndi-name>
+  </weblogic-enterprise-bean>
+  <weblogic-enterprise-bean>
+    <ejb-name>UsuarioSession</ejb-name>
+    <stateless-session-descriptor>
+    </stateless-session-descriptor>
+    <jndi-name>ejb.UsuarioSessionRemoteHome</jndi-name>
   </weblogic-enterprise-bean>
 </weblogic-ejb-jar>

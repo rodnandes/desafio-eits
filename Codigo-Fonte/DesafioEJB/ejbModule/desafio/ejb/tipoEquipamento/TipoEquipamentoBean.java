@@ -1,13 +1,16 @@
 package desafio.ejb.tipoEquipamento;
 
-import javax.ejb.EntityBean;
+import java.util.Date;
+
 import javax.ejb.CreateException;
+import javax.ejb.EntityBean;
+
 import weblogic.ejb.GenericEntityBean;
-import weblogic.ejbgen.Entity;
-import weblogic.ejbgen.JndiName;
-import weblogic.ejbgen.FileGeneration;
-import weblogic.ejbgen.Constants;
 import weblogic.ejbgen.CmpField;
+import weblogic.ejbgen.Constants;
+import weblogic.ejbgen.Entity;
+import weblogic.ejbgen.FileGeneration;
+import weblogic.ejbgen.JndiName;
 import weblogic.ejbgen.LocalMethod;
 
 /**
@@ -17,18 +20,20 @@ import weblogic.ejbgen.LocalMethod;
  * of your bean. Also, review primary key field methods and the Entity and JndiName annotations
  * to ensure the settings match the bean's intended use.
  */
-@Entity(ejbName = "TipoEquipamentoBean", dataSourceName = "cgDataSource", tableName = "TipoEquipamentoBean", primKeyClass = "java.lang.Integer")
+@Entity(ejbName = "TipoEquipamentoBean", dataSourceName = "oracledb", tableName = "TIPO_EQUIPAMENTO", primKeyClass = "java.lang.Integer")
 @JndiName(local = "ejb.TipoEquipamentoBeanLocalHome")
 @FileGeneration(localClass = Constants.Bool.TRUE, localHome = Constants.Bool.TRUE, remoteClass = Constants.Bool.FALSE, remoteHome = Constants.Bool.FALSE, valueClass = Constants.Bool.TRUE)
 abstract public class TipoEquipamentoBean extends GenericEntityBean implements
 		EntityBean {
+
+	private static final long serialVersionUID = 1L;
 	/**
 	 * IMPORTANT: Automatically generated ejbCreate() method.
 	 * Please change as appropriate.
 	 */
-	public java.lang.Integer ejbCreate(java.lang.Integer key)
+	public java.lang.Integer ejbCreate(java.lang.Integer id)
 			throws CreateException {
-		setKey(key);
+		setId(id);
 		return null;
 	}
 
@@ -39,18 +44,27 @@ abstract public class TipoEquipamentoBean extends GenericEntityBean implements
 	public void ejbPostCreate(java.lang.Integer key) {
 	}
 
-	/**
-	 * IMPORTANT: Automatically generated primary key field getter method. 
-	 * Please change name and class as appropriate.
-	 */
-	@CmpField(column = "key", primkeyField = Constants.Bool.TRUE)
+	@CmpField(column = "ID", primkeyField = Constants.Bool.TRUE)
 	@LocalMethod()
-	public abstract java.lang.Integer getKey();
-
-	/**
-	 * IMPORTANT: Automatically generated primary key field setter method. 
-	 * Please change name and class as appropriate.
-	 */
+	public abstract Integer getId();
 	@LocalMethod()
-	public abstract void setKey(java.lang.Integer key);
+	public abstract void setId(Integer id);
+	
+	@CmpField(column = "NOME")
+	@LocalMethod()
+	public abstract String getNome();
+	@LocalMethod()
+	public abstract void setNome(String nome);
+	
+	@CmpField(column = "PESO")
+	@LocalMethod()
+	public abstract Float getPeso();
+	@LocalMethod()
+	public abstract void setPeso(Float peso);
+	
+	@CmpField(column = "VALIDADE")
+	@LocalMethod()
+	public abstract Date getValidade();
+	@LocalMethod()
+	public abstract void setValidade(Date validade);
 }

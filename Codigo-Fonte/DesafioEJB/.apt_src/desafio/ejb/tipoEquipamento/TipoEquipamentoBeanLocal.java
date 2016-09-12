@@ -10,6 +10,7 @@ package desafio.ejb.tipoEquipamento;
 import javax.ejb.EJBLocalObject;
 
 // BEGIN imports from bean class
+import java.util.Date;
 import javax.ejb.CreateException;
 import javax.ejb.EntityBean;
 import weblogic.ejb.GenericEntityBean;
@@ -35,20 +36,39 @@ public interface TipoEquipamentoBeanLocal extends EJBLocalObject {
 
 
   /**
-   * * 
- * IMPORTANT: Automatically generated primary key field getter method. 
- * Please change name and class as appropriate.
- 
    * @weblogic.ejbgen.LocalMethod 
-   * @weblogic.ejbgen.CmpField key
+   * @weblogic.ejbgen.CmpField ID
    */
-  public Integer getKey() ;
+  public Integer getId() ;
   /**
-   * * 
- * IMPORTANT: Automatically generated primary key field setter method. 
- * Please change name and class as appropriate.
- 
+   * @weblogic.ejbgen.LocalMethod 
+   * @weblogic.ejbgen.CmpField NOME
+   */
+  public String getNome() ;
+  /**
+   * @weblogic.ejbgen.LocalMethod 
+   * @weblogic.ejbgen.CmpField PESO
+   */
+  public Float getPeso() ;
+  /**
+   * @weblogic.ejbgen.LocalMethod 
+   * @weblogic.ejbgen.CmpField VALIDADE
+   */
+  public java.util.Date getValidade() ;
+  /**
    * @weblogic.ejbgen.LocalMethod 
    */
-  public void setKey(Integer key) ;
+  public void setId(Integer id) ;
+  /**
+   * @weblogic.ejbgen.LocalMethod 
+   */
+  public void setNome(String nome) ;
+  /**
+   * @weblogic.ejbgen.LocalMethod 
+   */
+  public void setPeso(Float peso) ;
+  /**
+   * @weblogic.ejbgen.LocalMethod 
+   */
+  public void setValidade(java.util.Date validade) ;
 }

@@ -10,6 +10,7 @@ package desafio.ejb.tipoEquipamento;
 import java.io.Serializable;
 
 // BEGIN imports from bean class
+import java.util.Date;
 import javax.ejb.CreateException;
 import javax.ejb.EntityBean;
 import weblogic.ejb.GenericEntityBean;
@@ -26,26 +27,50 @@ public class TipoEquipamentoBeanValue  implements Serializable  {
 
   public TipoEquipamentoBeanValue() {}
 
-  public TipoEquipamentoBeanValue(java.lang.Integer key) {
-    m_key = key;
+  public TipoEquipamentoBeanValue(java.lang.Integer id, java.lang.String nome, java.lang.Float peso, java.util.Date validade) {
+    m_id = id;
+    m_nome = nome;
+    m_peso = peso;
+    m_validade = validade;
   }
 
   public java.lang.Integer toPK() {
-    return m_key;
+    return m_id;
   }
 
-  private java.lang.Integer m_key;
-  public java.lang.Integer getKey(){
-    return m_key;
+  private java.lang.Integer m_id;
+  public java.lang.Integer getId(){
+    return m_id;
   }
 
-  public void setKey(java.lang.Integer n){
-    m_key = n;
+  public void setId(java.lang.Integer n){
+    m_id = n;
+  }  private java.lang.String m_nome;
+  public java.lang.String getNome(){
+    return m_nome;
+  }
+
+  public void setNome(java.lang.String n){
+    m_nome = n;
+  }  private java.lang.Float m_peso;
+  public java.lang.Float getPeso(){
+    return m_peso;
+  }
+
+  public void setPeso(java.lang.Float n){
+    m_peso = n;
+  }  private java.util.Date m_validade;
+  public java.util.Date getValidade(){
+    return m_validade;
+  }
+
+  public void setValidade(java.util.Date n){
+    m_validade = n;
   }
 
   public String toString() {
     StringBuffer result = new StringBuffer("[TipoEquipamentoBeanValue ");
-    result.append(  " key:" + m_key);
+    result.append(  " id:" + m_id +   " nome:" + m_nome +   " peso:" + m_peso +   " validade:" + m_validade);
     result.append("]");
     return result.toString();
   }
@@ -54,7 +79,13 @@ public class TipoEquipamentoBeanValue  implements Serializable  {
   public int hashCode() {
     if (0 == m_hashCode) {
       m_hashCode = 
-                            (null != m_key ? m_key.hashCode() : 0)
+                            (null != m_id ? m_id.hashCode() : 0)
+                              ^
+                (null != m_nome ? m_nome.hashCode() : 0)
+                              ^
+                (null != m_peso ? m_peso.hashCode() : 0)
+                              ^
+                (null != m_validade ? m_validade.hashCode() : 0)
                       ;
     }
     
@@ -68,7 +99,13 @@ public class TipoEquipamentoBeanValue  implements Serializable  {
     try {
       TipoEquipamentoBeanValue other2 = ( TipoEquipamentoBeanValue ) other;
             return
-                      (safeEquals(this.m_key, other2.m_key))
+                      (safeEquals(this.m_id, other2.m_id))
+                                  &&
+                (safeEquals(this.m_nome, other2.m_nome))
+                                  &&
+                (safeEquals(this.m_peso, other2.m_peso))
+                                  &&
+                (safeEquals(this.m_validade, other2.m_validade))
                       ;
     }
     catch(ClassCastException ex) {

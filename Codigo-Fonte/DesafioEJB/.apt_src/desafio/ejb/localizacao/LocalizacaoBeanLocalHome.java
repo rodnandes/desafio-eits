@@ -48,7 +48,7 @@ public interface LocalizacaoBeanLocalHome extends EJBLocalHome {
  * Please change as appropriate.
  
    */
-  public LocalizacaoBeanLocal create(Integer key)     throws CreateException, javax.ejb.CreateException;
+  public LocalizacaoBeanLocal create(Integer id)     throws CreateException, javax.ejb.CreateException;
 
 
 

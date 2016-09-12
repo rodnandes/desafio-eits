@@ -21,10 +21,21 @@
       <cmp-version>2.x</cmp-version>
       <abstract-schema-name>UsuarioBean</abstract-schema-name>
       <cmp-field>
-        <field-name>key</field-name>
+        <field-name>id</field-name>
       </cmp-field>
-      <primkey-field>key</primkey-field>
+      <cmp-field>
+        <field-name>nome</field-name>
+      </cmp-field>
+      <primkey-field>id</primkey-field>
     </entity>
+    <session>
+      <ejb-name>LocalizacaoSession</ejb-name>
+      <home>desafio.ejb.manager.LocalizacaoSessionRemoteHome</home>
+      <remote>desafio.ejb.manager.LocalizacaoSessionRemote</remote>
+      <ejb-class>desafio.ejb.manager.LocalizacaoSession</ejb-class>
+      <session-type>Stateless</session-type>
+      <transaction-type>Container</transaction-type>
+    </session>
     <entity>
       <ejb-name>LocalizacaoBean</ejb-name>
       <local-home>desafio.ejb.localizacao.LocalizacaoBeanLocalHome</local-home>
@@ -36,9 +47,12 @@
       <cmp-version>2.x</cmp-version>
       <abstract-schema-name>LocalizacaoBean</abstract-schema-name>
       <cmp-field>
-        <field-name>key</field-name>
+        <field-name>codigoLocalizador</field-name>
       </cmp-field>
-      <primkey-field>key</primkey-field>
+      <cmp-field>
+        <field-name>id</field-name>
+      </cmp-field>
+      <primkey-field>id</primkey-field>
     </entity>
     <entity>
       <ejb-name>TipoEquipamentoBean</ejb-name>
@@ -51,9 +65,34 @@
       <cmp-version>2.x</cmp-version>
       <abstract-schema-name>TipoEquipamentoBean</abstract-schema-name>
       <cmp-field>
-        <field-name>key</field-name>
+        <field-name>id</field-name>
       </cmp-field>
-      <primkey-field>key</primkey-field>
+      <cmp-field>
+        <field-name>nome</field-name>
+      </cmp-field>
+      <cmp-field>
+        <field-name>peso</field-name>
+      </cmp-field>
+      <cmp-field>
+        <field-name>validade</field-name>
+      </cmp-field>
+      <primkey-field>id</primkey-field>
     </entity>
+    <session>
+      <ejb-name>TipoEquipamentoSession</ejb-name>
+      <home>desafio.ejb.manager.TipoEquipamentoSessionRemoteHome</home>
+      <remote>desafio.ejb.manager.TipoEquipamentoSessionRemote</remote>
+      <ejb-class>desafio.ejb.manager.TipoEquipamentoSession</ejb-class>
+      <session-type>Stateless</session-type>
+      <transaction-type>Container</transaction-type>
+    </session>
+    <session>
+      <ejb-name>UsuarioSession</ejb-name>
+      <home>desafio.ejb.manager.UsuarioSessionRemoteHome</home>
+      <remote>desafio.ejb.manager.UsuarioSessionRemote</remote>
+      <ejb-class>desafio.ejb.manager.UsuarioSession</ejb-class>
+      <session-type>Stateless</session-type>
+      <transaction-type>Container</transaction-type>
+    </session>
   </enterprise-beans>
 </ejb-jar>
