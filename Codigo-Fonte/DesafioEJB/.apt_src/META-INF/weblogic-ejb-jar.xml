@@ -26,6 +26,12 @@
     <jndi-name>ejb.LocalizacaoSessionRemoteHome</jndi-name>
   </weblogic-enterprise-bean>
   <weblogic-enterprise-bean>
+    <ejb-name>LocalizacaoDBSession</ejb-name>
+    <stateless-session-descriptor>
+    </stateless-session-descriptor>
+    <jndi-name>ejb.LocalizacaoDBSessionRemoteHome</jndi-name>
+  </weblogic-enterprise-bean>
+  <weblogic-enterprise-bean>
     <ejb-name>LocalizacaoBean</ejb-name>
     <entity-descriptor>
       <persistence>

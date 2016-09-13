@@ -6,8 +6,8 @@
 		<project>DesafioEJB</project>
 		<project>DesafioFacade</project>
 		<project>DesafioFacadeClient</project>
-		<project>DesafioVO</project>
 		<project>DesafioWeb</project>
+		<project>DesafioVO</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

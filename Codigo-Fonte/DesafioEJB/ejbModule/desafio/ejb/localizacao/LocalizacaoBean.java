@@ -52,4 +52,10 @@ abstract public class LocalizacaoBean extends GenericEntityBean implements
 	public abstract String getCodigoLocalizador();
 	@LocalMethod()
 	public abstract void setCodigoLocalizador(String codigo_localizador);
+
+	public static LocalizacaoBeanLocalHome getHome() {
+		// TODO Auto-generated method stub
+		
+		return null;
+	}
 }

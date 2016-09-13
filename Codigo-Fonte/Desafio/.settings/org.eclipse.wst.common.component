@@ -13,11 +13,11 @@
         <dependent-module archiveName="DesafioFacadeClient.jar" deploy-path="/" handle="module:/resource/DesafioFacadeClient/DesafioFacadeClient">
             <dependency-type>uses</dependency-type>
         </dependent-module>
-        <dependent-module archiveName="DesafioVO.jar" deploy-path="/lib" handle="module:/resource/DesafioVO/DesafioVO">
-            <dependency-type>uses</dependency-type>
-        </dependent-module>
         <dependent-module archiveName="DesafioWeb.war" deploy-path="/" handle="module:/resource/DesafioWeb/DesafioWeb">
             <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="DesafioVO.jar" deploy-path="/lib" handle="module:/resource/DesafioVO/DesafioVO">
             <dependency-type>uses</dependency-type>
         </dependent-module>
     </wb-module>

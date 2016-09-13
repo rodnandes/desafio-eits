@@ -14,6 +14,11 @@ import java.rmi.RemoteException;
 import java.util.Collection;
 
 // BEGIN imports from bean class
+import desafio.ejb.localizacao.LocalizacaoBean;
+import desafio.ejb.localizacao.LocalizacaoBeanLocal;
+import desafio.ejb.localizacao.LocalizacaoBeanLocalHome;
+import desafio.localizacao.LocalizacaoVO;
+import javax.ejb.EJBException;
 import javax.ejb.SessionBean;
 import weblogic.ejb.GenericSessionBean;
 import weblogic.ejbgen.Constants;

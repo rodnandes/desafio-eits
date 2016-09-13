@@ -1,6 +1,12 @@
 package desafio.ejb.manager;
 
+import javax.ejb.EJBException;
 import javax.ejb.SessionBean;
+
+import desafio.ejb.localizacao.LocalizacaoBean;
+import desafio.ejb.localizacao.LocalizacaoBeanLocal;
+import desafio.ejb.localizacao.LocalizacaoBeanLocalHome;
+import desafio.localizacao.LocalizacaoVO;
 import weblogic.ejb.GenericSessionBean;
 import weblogic.ejbgen.Session;
 import weblogic.ejbgen.JndiName;
@@ -21,12 +27,26 @@ public class LocalizacaoSession extends GenericSessionBean implements
 		SessionBean {
 	private static final long serialVersionUID = 1L;
 
-	/* (non-Javadoc)
-	 * @see weblogic.ejb.GenericSessionBean#ejbCreate()
-	 */
+	private LocalizacaoBeanLocal localizacao;
+	private LocalizacaoBeanLocalHome localizacaoHome;
+	
 	public void ejbCreate() {
 		// IMPORTANT: Add your code here
 	}
 
-	// IMPORTANT: Add business methods
+	private void inicializa(LocalizacaoVO localizacaoVO) throws EJBException {
+		
+		this.localizacao = null;
+		this.localizacaoHome = null;
+		
+		try {
+			this.localizacaoHome = LocalizacaoBean.getHome(); // todo
+			if(localizacaoVO != null && localizacaoVO.getId() > 0){
+				this.localizacao = this.localizacaoHome.findByPrimaryKey(localizacaoVO.getId());
+			}
+		} catch (Exception e) {
+			throw new EJBException(e);
+		}
+	}
+
 }

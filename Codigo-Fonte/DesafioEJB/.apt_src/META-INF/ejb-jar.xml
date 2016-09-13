@@ -36,6 +36,14 @@
       <session-type>Stateless</session-type>
       <transaction-type>Container</transaction-type>
     </session>
+    <session>
+      <ejb-name>LocalizacaoDBSession</ejb-name>
+      <home>desafio.ejb.managerdb.LocalizacaoDBSessionRemoteHome</home>
+      <remote>desafio.ejb.managerdb.LocalizacaoDBSessionRemote</remote>
+      <ejb-class>desafio.ejb.managerdb.LocalizacaoDBSession</ejb-class>
+      <session-type>Stateless</session-type>
+      <transaction-type>Container</transaction-type>
+    </session>
     <entity>
       <ejb-name>LocalizacaoBean</ejb-name>
       <local-home>desafio.ejb.localizacao.LocalizacaoBeanLocalHome</local-home>
