@@ -62,6 +62,14 @@
       </cmp-field>
       <primkey-field>id</primkey-field>
     </entity>
+    <session>
+      <ejb-name>TipoEquipamentoDBSession</ejb-name>
+      <home>desafio.ejb.managerdb.TipoEquipamentoDBSessionRemoteHome</home>
+      <remote>desafio.ejb.managerdb.TipoEquipamentoDBSessionRemote</remote>
+      <ejb-class>desafio.ejb.managerdb.TipoEquipamentoDBSession</ejb-class>
+      <session-type>Stateless</session-type>
+      <transaction-type>Container</transaction-type>
+    </session>
     <entity>
       <ejb-name>TipoEquipamentoBean</ejb-name>
       <local-home>desafio.ejb.tipoEquipamento.TipoEquipamentoBeanLocalHome</local-home>
@@ -99,6 +107,14 @@
       <home>desafio.ejb.manager.UsuarioSessionRemoteHome</home>
       <remote>desafio.ejb.manager.UsuarioSessionRemote</remote>
       <ejb-class>desafio.ejb.manager.UsuarioSession</ejb-class>
+      <session-type>Stateless</session-type>
+      <transaction-type>Container</transaction-type>
+    </session>
+    <session>
+      <ejb-name>UsuarioDBSession</ejb-name>
+      <home>desafio.ejb.managerdb.UsuarioDBSessionRemoteHome</home>
+      <remote>desafio.ejb.managerdb.UsuarioDBSessionRemote</remote>
+      <ejb-class>desafio.ejb.managerdb.UsuarioDBSession</ejb-class>
       <session-type>Stateless</session-type>
       <transaction-type>Container</transaction-type>
     </session>
